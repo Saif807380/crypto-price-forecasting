@@ -10,7 +10,7 @@ import { Line } from "react-chartjs-2";
 import { getDatesBetween } from "../helpers";
 import { getForecast } from "../actions/forecastActions";
 
-const Bitcoin = () => {
+const Monero = () => {
   const [selectedDate, setSelectedDate] = useState(new Date("10/12/2021"));
   const [chartData, setChartData] = useState({
     labels: [],
@@ -25,7 +25,7 @@ const Bitcoin = () => {
       new Date("10/11/2021")
     );
     getForecast({
-      currency: "btc",
+      currency: "mon",
       forecastDate: date.toLocaleDateString("en-GB")
     }).then((res) => {
       if (res.error) {
@@ -77,7 +77,7 @@ const Bitcoin = () => {
             variant="h5"
             style={{ marginRight: "16px", display: "inline" }}
           >
-            Bitcoin (BTC)
+            Monero (XMR)
           </Typography>
           <Box>
             <KeyboardDatePicker
@@ -103,4 +103,4 @@ const Bitcoin = () => {
   );
 };
 
-export default Bitcoin;
+export default Monero;

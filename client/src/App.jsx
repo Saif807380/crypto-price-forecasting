@@ -3,6 +3,8 @@ import { Container, Typography, Box, Divider } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 
 import Bitcoin from "./components/Bitcoin";
+import Monero from "./components/Monero";
+import Ethereum from "./components/Ethereum";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -27,7 +29,15 @@ const App = () => {
       </Box>
       <Divider style={{ marginTop: "16px" }} />
       <Box style={{ paddingTop: "16px" }}>
-        <Bitcoin />
+        <Box style={{ marginBottom: "16px" }}>
+          <Bitcoin />
+        </Box>
+        <Box style={{ marginBottom: "16px" }}>
+          <Ethereum />
+        </Box>
+        <Box style={{ marginBottom: "16px" }}>
+          <Monero />
+        </Box>
       </Box>
     </Container>
   );
