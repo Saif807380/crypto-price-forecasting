@@ -16,15 +16,15 @@ class Model:
         3. build scalers for each dataset
         4. build models for each dataset
         """
-        self.eth_df = pd.read_csv("~/Desktop/dmdw-project/server/data/ETH.csv", index_col="Date")
+        self.eth_df = pd.read_csv("~/Desktop/dmdw-project/server/data/ethereum/ETH.csv", index_col="Date")
         self.eth_df['Price'] = self.eth_df['Price'].replace(',','', regex=True)
         self.eth_df['Price'] = self.eth_df['Price'].astype(float, errors = 'raise')
 
-        self.mon_df = pd.read_csv("~/Desktop/dmdw-project/server/data/Monero.csv", index_col="Date")
+        self.mon_df = pd.read_csv("~/Desktop/dmdw-project/server/data/monero/Monero.csv", index_col="Date")
         self.mon_df['Price'] = self.mon_df['Price'].replace(',','', regex=True)
         self.mon_df['Price'] = self.mon_df['Price'].astype(float, errors = 'raise')
 
-        self.btc_df = pd.read_csv("~/Desktop/dmdw-project/server/data/BTC.csv", index_col="Date")
+        self.btc_df = pd.read_csv("~/Desktop/dmdw-project/server/data/bitcoin/BTC.csv", index_col="Date")
         self.btc_df['Price'] = self.btc_df['Price'].replace(',','', regex=True)
         self.btc_df['Price'] = self.btc_df['Price'].astype(float, errors = 'raise')
         
