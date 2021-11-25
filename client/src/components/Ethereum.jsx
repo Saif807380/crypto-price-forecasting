@@ -64,7 +64,17 @@ const Ethereum = () => {
   const options = {
     scales: {
       y: {
-        beginAtZero: false
+        beginAtZero: false,
+        title: {
+          display: true,
+          text: "Price in USD"
+        }
+      },
+      x: {
+        title: {
+          display: true,
+          text: "Date"
+        }
       }
     }
   };
